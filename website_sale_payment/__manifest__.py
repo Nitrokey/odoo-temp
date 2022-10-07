@@ -17,6 +17,7 @@
      """,
     "license": "AGPL-3",
     "depends": [
+        "stock_picking_on_hold",
         "website_sale",
     ],
     "installable": True,
