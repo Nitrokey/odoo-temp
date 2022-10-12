@@ -1,5 +1,3 @@
-
-
 import logging
 
 from odoo import _, http
