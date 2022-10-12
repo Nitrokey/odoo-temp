@@ -43,8 +43,10 @@ class PaymentPortal(PaymentPortal):
         )
 
         default_payment_method_id = tx_sudo.acquirer_id._get_default_payment_method_id()
-        payment_method_id = request.env["account.payment.method"].sudo().browse(
-            default_payment_method_id
+        payment_method_id = (
+            request.env["account.payment.method"]
+            .sudo()
+            .browse(default_payment_method_id)
         )
         so_vals = {"payment_tx_id": tx_sudo.id}
         # Set Payment Method from Acquirer
